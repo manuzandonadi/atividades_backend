@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cálculo para churrasco</title>
+</head>
+<body>
+    <p>informe a quantidade de pessoas <input type="number" name="pessoas" id="pessoas"> </p>
+    <p>informe a quantidade de carne por pessoa <input type="number" name="carne" id="carne" placeholder="insira o valor em g"> </p>
+    <p><label id="ondevaiaparecer">aqui irá aparecer o resultado</label> </p>
+
+    <button onclick="calcular()"> calcular </button>
+
+    <script>
+        function calcular(){
+            var pessoas = parseInt(document.getElementById('pessoas').value)
+            var carne = parseInt(document.getElementById('carne').value)
+
+            qtde = pessoas * carne
+
+            alert(`a quantidade total de carne necessária é: ${qtde} g`)
+            document.getElementById('ondevaiaparecer').innerText = qtde
+        }
+    </script>
+    
+</body>
+</html>
