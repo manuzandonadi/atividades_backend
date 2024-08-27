@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <p>informe o primeiro número <input type="number" name="n1" id="n1" placeholder="informe somente números"> </p>
+    <p>informe o segundp número <input type="number" name="n2" id="n2" placeholder="informe somente números"> </p>
+    <button onclick="somar()">somar</button>
+    <button onclick="subtrair()">subtrair</button>
+    <button onclick="dividir()">dividir</button>
+    <button onclick="multiplicar()">multiplicar</button>
+    <p><label id="ondevaiaparecer">aqui irá aparecer o resultado</label> </p>
+
+    <script>
+        function somar(){
+            var n1 = parseInt(document.getElementById('n1').value)
+            var n2 = parseInt(document.getElementById('n2').value)
+
+            soma = n1 + n2
+            alert(`a soma dos valores é: ${soma}`)
+            document.getElementById('ondevaiaparecer').innerText = soma
+        }
+
+        function subtrair(){
+            var n1 = parseInt(document.getElementById('n1').value)
+            var n2 = parseInt(document.getElementById('n2').value)
+
+            subtração = n1 - n2
+            alert(`a subtração dos valores é: ${subtração}`)
+            document.getElementById('ondevaiaparecer').innerText = subtração
+        }
+
+        function dividir(){
+            var n1 = parseInt(document.getElementById('n1').value)
+            var n2 = parseInt(document.getElementById('n2').value)
+
+            divisão = n1 / n2
+            alert(`a divisão dos valores é: ${divisão}`)
+            document.getElementById('ondevaiaparecer').innerText = divisão
+        }
+
+        function multiplicar(){
+            var n1 = parseInt(document.getElementById('n1').value)
+            var n2 = parseInt(document.getElementById('n2').value)
+
+            multiplicação = n1 * n2
+            alert(`a multiplicação dos valores é: ${multiplicação}`)
+            document.getElementById('ondevaiaparecer').innerText = multiplicação
+        }
+
+    </script>
+
+</body>
+</html>
