@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notas finais</title>
+</head>
+<body>
+    <h1>notas finais</h1>
+
+    <p>informe a primeira nota <input type="number" name="n1" id="n1"></p>
+    <p>informe a segunda nota <input type="number" name="n2" id="n2"></p>
+    <p>informe a terceira nota <input type="number" name="n3" id="n3"></p>
+
+    <p><button onclick="avaliar()"> avaliar </button></p>
+
+    <p><label id="notafinal"></label></p>
+
+    <script>
+        function avaliar(){
+            var n1 = parseFloat(document.getElementById('n1').value)
+            var n2 = parseFloat(document.getElementById('n2').value)
+            var n3 = parseFloat(document.getElementById('n3').value)
+
+
+            media = (n1 + n2 + n3) / 3
+
+            if(media >= 7){
+                alert(`você foi aprovado com a nota:  ${media}`)
+            }
+            else if(media <= 6.9 && media >= 4){
+                alert(`você ficou de exame. sua nota é:  ${media}`)
+            }
+            else{
+                alert(`você foi reprovado. sua nota é:  ${media}`)
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>
